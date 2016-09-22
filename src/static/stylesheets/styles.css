@@ -1,0 +1,105 @@
+* {
+  /*margin: 0 auto;*/
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+body {
+  background: url('http://s.hswstatic.com/gif/paying-bills-original.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  margin: 0px;
+  text-align: center;
+}
+
+#main-header {
+  font-family: 'Bowlby One', cursive;
+  background-color: white;
+  color: black;
+  padding: .45rem;
+  font-size: 2.5rem;
+}
+
+#sub-header {
+  font-size: 2rem;
+  font-family: Helvetica;
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+form.bill-post-display {
+  width: 80%;
+  display: inline-block;
+  text-align: center;
+  display: inline-block;
+}
+
+form.bill-post-display input[name="description"] {
+  width: 60%;
+  display: inline-block;
+  margin: 3px;
+
+}
+
+form.bill-post-display input[name="amount"] {
+  width: 15%;
+  display: inline-block;
+  margin: 2px;
+}
+
+button {
+  /*display: inline-block;
+  font-size: .75rem;*/
+}
+ .active-buttons {
+  display: inline-block;
+  font-size: .75rem;
+ }
+
+.amounts {
+  color: red;
+}
+
+.month {
+  width: 50rem;
+  height: 30rem;
+  border: 1px solid black;
+  background-color: lightblue;
+  margin: 0 auto;
+  text-align: center;
+  right: 35px;
+  top: 3rem;
+}
+
+.month-header {
+  font-family: Helvetica;
+  color: black;
+  background-color: lightblue;
+}
+
+.saved {
+  /*width: 100%;*/
+  /*display: inline block;*/
+}
+
+.monthLinks {
+  padding: 0.5rem;
+  color: white;
+  background-color: black;
+}
+
+input {
+  font-family: 'Coming Soon', cursive;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
