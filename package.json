@@ -1,0 +1,45 @@
+{
+  "name": "bill-organizer",
+  "version": "1.0.0",
+  "description": "an app to organize your monthly bills",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --hot --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerby51/Bill-Organizer.git"
+  },
+  "keywords": [
+    "react",
+    "bills",
+    "app"
+  ],
+  "author": "katie b",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kerby51/Bill-Organizer/issues"
+  },
+  "homepage": "https://github.com/kerby51/Bill-Organizer#readme",
+  "dependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "firebase": "^3.4.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1",
+    "superagent": "^2.3.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0"
+  }
+}
