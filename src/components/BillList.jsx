@@ -3,8 +3,8 @@ import BillPost from './BillPost.jsx';
 
 const propTypes = {
   billPosts: React.PropTypes.array,
-  handlePublish: React.PropTypes.func,
-  handleDelete: React.PropTypes.func,
+  handlePosting: React.PropTypes.func,
+  handleRemove: React.PropTypes.func,
   calculateTotal: React.PropTypes.func,
 };
 
@@ -14,9 +14,8 @@ class BillList extends React.Component {
       return (
         <li key={idx}>
           <BillPost
-            handleDelete={this.props.handleDelete}
-            handlePublish={this.props.handlePublish}
-            calculateTotal={this.props.calculateTotal}
+            handleRemove={this.props.handleRemove}
+            handlePosting={this.props.handlePosting}
             amount={billPost.amount}
             description={billPost.description}
             id={billPost.id}

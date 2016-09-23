@@ -1,5 +1,4 @@
 * {
-  /*margin: 0 auto;*/
   box-sizing: border-box;
   font-family: Helvetica;
 }
@@ -19,14 +18,9 @@ body {
   font-family: 'Bowlby One', cursive;
   background-color: white;
   color: black;
-  padding: .45rem;
+  padding: 1.5rem;
   font-size: 2.5rem;
-}
-
-#sub-header {
-  font-size: 2rem;
-  font-family: Helvetica;
-
+  margin-top: 10px;
 }
 
 ul {
@@ -41,22 +35,36 @@ form.bill-post-display {
 }
 
 form.bill-post-display input[name="description"] {
-  width: 60%;
+  width: 67%;
   display: inline-block;
   margin: 3px;
-
+  font-family: 'Coming Soon', cursive;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
 }
 
 form.bill-post-display input[name="amount"] {
   width: 15%;
   display: inline-block;
   margin: 2px;
+  font-family: 'Coming Soon', cursive;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
 }
 
-button {
-  /*display: inline-block;
-  font-size: .75rem;*/
+input {
+  font-style: italic;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 50%;
+  display: inline-block;
+  padding-bottom: .5rem;
+  margin-bottom: 1rem;
+  background-color: white;
 }
+
  .active-buttons {
   display: inline-block;
   font-size: .75rem;
@@ -68,9 +76,9 @@ button {
 
 .month {
   width: 50rem;
-  height: 30rem;
+  height: 33rem;
   border: 1px solid black;
-  background-color: lightblue;
+  background-color: #2980b9;
   margin: 0 auto;
   text-align: center;
   right: 35px;
@@ -79,13 +87,8 @@ button {
 
 .month-header {
   font-family: Helvetica;
-  color: black;
-  background-color: lightblue;
-}
-
-.saved {
-  /*width: 100%;*/
-  /*display: inline block;*/
+  color: white;
+  background-color: #2980b9;
 }
 
 .monthLinks {
@@ -94,12 +97,67 @@ button {
   background-color: black;
 }
 
-input {
-  font-family: 'Coming Soon', cursive;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
 .hidden {
   display: none;
+}
+
+#login {
+  position: absolute;
+  top: 1rem;
+  right: 5.7rem;
+  font-size: 1rem;
+  color: black;
+}
+
+#register {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  color: black;
+}
+
+#sign-out {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+#signOut {
+  color: black;
+}
+
+.btn {
+  color: white;
+  background-color: #3ba4fb;
+  height: 2rem;
+  width: 9rem;
+  box-sizing: border-box;
+  border-radius: 5%;
+  font-size: 1.3rem;
+}
+
+#sub-header {
+  font-size: 1rem;
+  color: red;
+  margin-top: 0;
+  padding: 0;
+}
+
+h2 {
+  background-color: white;
+  width: 240px;
+  height: 40px;
+  margin: 0 auto;
+  padding-top: 8px;
+  top: 20px;
+  border: 1.5px solid black;
+}
+
+#tot {
+  color: red;
+}
+
+.input-forms {
+  border: 1px solid black;
+  background-color: #fbfdb4;
 }

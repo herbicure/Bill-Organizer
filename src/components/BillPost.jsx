@@ -4,8 +4,8 @@ import { Link } from 'react-router';
 const propTypes = {
   description: React.PropTypes.string,
   amount: React.PropTypes.string,
-  handlePublish: React.PropTypes.func,
-  handleDelete: React.PropTypes.func,
+  handlePosting: React.PropTypes.func,
+  handleRemove: React.PropTypes.func,
   id: React.PropTypes.string,
   calculateTotal: React.PropTypes.func,
 };
@@ -15,12 +15,12 @@ class BillPost extends Component {
     super(props);
     this.state = {
       localDescription: this.props.description || '',
-      localAmount: this.props.amount || '',
+      localAmount: this.props.amount || 0,
     };
     this.handleEditOfDescription = this.handleEditOfDescription.bind(this);
     this.handleEditOfAmount = this.handleEditOfAmount.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleDeleteClick = this.handleDeleteClick.bind(this);
+    this.handleRemoveClick = this.handleRemoveClick.bind(this);
     this.isSaved = this.isSaved.bind(this);
   }
   componentWillReceiveProps(nextProps) {
@@ -43,15 +43,15 @@ class BillPost extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    this.props.handlePublish({
+    this.props.handlePosting({
       id: this.props.id,
       description: this.state.localDescription,
       amount: this.state.localAmount,
     });
     this.setState({ saved: true });
   }
-  handleDeleteClick() {
-    this.props.handleDelete(this.props.id);
+  handleRemoveClick() {
+    this.props.handleRemove(this.props.id);
   }
   isSaved() {
     return this.props.description === this.state.localDescription &&
@@ -63,7 +63,7 @@ class BillPost extends Component {
     if (this.isSaved()) {
       activeButtons = (
         <div className="active-buttons">
-          <button id="removeButton" onClick={this.handleDeleteClick}>Remove</button>
+          <button id="removeButton" onClick={this.handleRemoveClick}>Remove</button>
         </div>
       );
     }
@@ -95,7 +95,6 @@ class BillPost extends Component {
           </button>
           {activeButtons}
         </form>
-
       </div>
     );
   }

@@ -5,15 +5,14 @@ import request from 'superagent';
 import BillPost from './BillPost.jsx';
 import BillList from './BillList.jsx';
 import NavLinks from './NavLinks.jsx';
-import Register from './Register.jsx';
 
 
-class January extends Component {
+class February extends Component {
   constructor(props) {
     super(props);
     this.state = {
       billPosts: [],
-      janTotal: 0,
+      total: 0,
     };
     this.handlePosting = this.handlePosting.bind(this);
     this.httpRemovePost = this.httpRemovePost.bind(this);
@@ -25,7 +24,7 @@ class January extends Component {
   }
   httpGetPosts() {
     // const url = `https://monthly-bill-organizer.firebaseio.com/users/${uid}/2016/january.json`;
-    const url = 'https://monthly-bill-organizer.firebaseio.com/users/2016/january.json';
+    const url = 'https://monthly-bill-organizer.firebaseio.com/users/2016/february.json';
     request.get(url).then((response) => {
       const postsData = response.body;
       let billPosts = [];
@@ -51,19 +50,19 @@ class January extends Component {
     }
   }
   httpRemovePost(id) {
-    const url = `https://monthly-bill-organizer.firebaseio.com/users/2016/january/${id}.json`;
+    const url = `https://monthly-bill-organizer.firebaseio.com/users/2016/february/${id}.json`;
     request.del(url).then(() => {
       this.httpGetPosts();
     });
   }
   httpUpdatePost({ id, amount, description }) {
-    const url = `https://monthly-bill-organizer.firebaseio.com/users/2016/january/${id}.json`;
+    const url = `https://monthly-bill-organizer.firebaseio.com/users/2016/february/${id}.json`;
     request.patch(url).send({ id, amount, description }).then(() => {
       this.httpGetPosts();
     });
   }
   httpPublishPost({ amount, description }) {
-    const url = 'https://monthly-bill-organizer.firebaseio.com/users/2016/january.json';
+    const url = 'https://monthly-bill-organizer.firebaseio.com/users/2016/february.json';
     request.post(url).send({ amount, description }).then(() => {
       this.httpGetPosts();
     });
@@ -73,7 +72,7 @@ class January extends Component {
     this.state.billPosts.forEach((bill) => {
       updatedTotal += parseFloat(bill.amount);
       this.setState({
-        janTotal: updatedTotal.toFixed(2),
+        total: updatedTotal.toFixed(2),
       });
     });
   }
@@ -85,7 +84,7 @@ class January extends Component {
          <br />
         </div>
         <div id="january" className="month">
-          <h1 className="month-header">JANUARY 2016</h1>
+          <h1 className="month-header">FEBRUARY 2016</h1>
 
           <BillList
             handleRemove={this.httpRemovePost}
@@ -97,14 +96,12 @@ class January extends Component {
             handlePosting={this.handlePosting}
           />
           <br />
-          <h2>TOTAL: <span id="tot"> ${this.state.janTotal}</span></h2>
+          <h2>TOTAL: <span id="tot">${this.state.total}</span></h2>
         </div>
       </div>
     );
   }
 }
 
-export default January;
-
-
+export default February;
 
