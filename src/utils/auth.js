@@ -1,5 +1,5 @@
 const React = require('react'),
-const firebase = require('../../firebase.config.js');
+firebase = require('../../firebase.config.js');
 
 function requireAuth(nextState, replace, callback) {
   firebase.auth().onAuthStateChanged((user) => {
