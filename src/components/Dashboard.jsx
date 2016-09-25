@@ -1,16 +1,48 @@
 import React, { Component } from 'react';
 import NavLinks from './NavLinks.jsx';
-import January from './January.jsx';
+import January from './months/January.jsx';
+import Snapshot from './Snapshot.jsx';
+// import February from './months/February.jsx';
 
-const Dashboard = () => {
-  return (
-    <div>
-      <NavLinks />
-    </div>
-  );
+const propTypes = {
+  children: React.PropTypes.element,
+  // janTotal: React.PropTypes.number,
 };
 
+class Dashboard extends Component {
+  constructor(props) {
+  super(props);
+    this.state = {
+      renderTest: true,
+    };
+  }
+  renderTest() {
+    this.setState({
+      renderTest: true,
+    });
+    console.log(this.state.renderTest);
+  }
+  render() {
+    return (
+      <div>
+        <div>
+          <NavLinks />
+          {this.props.children}
+        </div>
+        <div>
+
+        </div>
+      </div>
+    );
+  }
+}
+
+Dashboard.propTypes = propTypes;
+
 export default Dashboard;
+
+// <Snapshot renderTest={this.state.renderTest} />
+//<Snapshot janTotal={this.props.janTotal} />
 
 // const propTypes = {
 //   janTotal: React.PropTypes.number,
@@ -40,5 +72,18 @@ export default Dashboard;
 // Dashboard.propTypes = propTypes;
 
 // export default Dashboard;
+
+
+// const Dashboard = () => {
+//   return (
+//     <div>
+//       <NavLinks />
+
+//     </div>
+//   );
+// };
+
+// export default Dashboard;
+
 
 
