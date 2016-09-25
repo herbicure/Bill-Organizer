@@ -7,9 +7,11 @@ import Home from './components/Home.jsx';
 import Register from './components/Register.jsx';
 import Login from './components/Login.jsx';
 import Dashboard from './components/Dashboard.jsx';
+import Snapshot from './components/Snapshot.jsx';
 import requireAuth from './utils/auth.js';
-import January from './components/January.jsx';
-import February from './components/February.jsx';
+import January from './components/months/January.jsx';
+import February from './components/months/February.jsx';
+import March from './components/months/March.jsx';
 
 
 ReactDOM.render((
@@ -18,16 +20,15 @@ ReactDOM.render((
       <IndexRoute component={Home} />
       <Route path="register" component={Register} />
       <Route path="login" component={Login} />
-      <Route path="dashboard" component={Dashboard} />
-      <Route path="january" component={January} />
-      <Route path="february" component={February} />
-
+      <Route path=":uid" component={Dashboard} onEnter={requireAuth} >
+        <Route path="january" component={January} onEnter={requireAuth} />
+        <Route path="february" component={February} onEnter={requireAuth} />
+        <Route path="march" component={March} onEnter={requireAuth} />
+      </Route>
     </Route>
+
   </Router>
   ), document.querySelector('#root'));
-
-
-
 
 
 
