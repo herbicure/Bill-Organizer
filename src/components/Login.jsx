@@ -28,9 +28,9 @@ class Login extends Component {
         console.log(err);
       })
       .then(() => {
-        this.props.router.push('/dashboard');
-        // const userId = firebase.auth().currentUser.uid;
-        // this.props.router.push(`/${userId}`);
+        // this.props.router.push('/dashboard');
+        const userId = firebase.auth().currentUser.uid;
+        this.props.router.push(`/${userId}`);
       });
       console.log('logged in');
       firebase.auth().onAuthStateChanged((user) => {

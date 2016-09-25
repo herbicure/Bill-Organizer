@@ -31,9 +31,9 @@ class Register extends Component {
         .set({ first_name: '', last_name: '', email: email });
       })
       .then(() => {
-        // const userId = firebase.auth().currentUser.uid;
-        // this.props.router.push(`/${userId}`);
-        this.props.router.push('/dashboard');
+        const userId = firebase.auth().currentUser.uid;
+        this.props.router.push(`/${userId}`);
+        // this.props.router.push('/dashboard');
       });
         // this.props.router.push('/dashboard');
       console.log(email);
