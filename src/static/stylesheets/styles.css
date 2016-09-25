@@ -83,6 +83,8 @@ input {
   text-align: center;
   right: 35px;
   top: 3rem;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .month-header {
@@ -95,6 +97,7 @@ input {
   padding: 0.5rem;
   color: white;
   background-color: black;
+  text-decoration: none;
 }
 
 .hidden {
