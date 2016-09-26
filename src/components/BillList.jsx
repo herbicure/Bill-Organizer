@@ -25,7 +25,7 @@ class BillList extends React.Component {
       );
     });
     return (
-      <ul>
+      <ul id="bill-elements">
         {billElements}
       </ul>
     );
