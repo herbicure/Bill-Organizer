@@ -6,11 +6,12 @@ const Home = () => {
       <h1 id="home-header"> A one stop shop for managing your expenses online! </h1>
       <img id="wallet" src="./images/wallet.png" />
         <div id="app-summary">
-         <p>Monthly Bill Organizer offers help with: <br /></p>
+         <p>Simply log-in or register for immediate assistance with: <br /></p>
           <ul id="selling-points">
-            <li>Budget assistance</li>
-            <li>Spending trends</li>
-            <li>Payment punctuality</li>
+            <li className="sellLi">Payment punctuality</li>
+            <li className="sellLi">Budgeting</li>
+            <li className="sellLi">Spending trends</li>
+            <li className="sellLi">...and more!</li>
           </ul>
         </div>
     </div>
