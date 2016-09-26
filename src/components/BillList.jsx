@@ -18,6 +18,7 @@ class BillList extends React.Component {
             handlePosting={this.props.handlePosting}
             amount={billPost.amount}
             description={billPost.description}
+            dueDate={billPost.dueDate}
             id={billPost.id}
           />
         </li>

@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 const propTypes = {
   description: React.PropTypes.string,
   amount: React.PropTypes.string,
+  dueDate: React.PropTypes.string,
   handlePosting: React.PropTypes.func,
   handleRemove: React.PropTypes.func,
   id: React.PropTypes.string,
@@ -16,9 +17,11 @@ class BillPost extends Component {
     this.state = {
       localDescription: this.props.description || '',
       localAmount: this.props.amount || 0,
+      localDueDate: this.props.dueDate || '',
     };
     this.handleEditOfDescription = this.handleEditOfDescription.bind(this);
     this.handleEditOfAmount = this.handleEditOfAmount.bind(this);
+    this.handleEditOfDueDate = this.handleEditOfDueDate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleRemoveClick = this.handleRemoveClick.bind(this);
     this.isSaved = this.isSaved.bind(this);
@@ -27,6 +30,7 @@ class BillPost extends Component {
     this.setState({
       localDescription: nextProps.description || '',
       localAmount: nextProps.amount || '',
+      localDueDate: nextProps.dueDate || '',
     });
   }
   handleEditOfDescription(e) {
@@ -41,12 +45,19 @@ class BillPost extends Component {
       localAmount: newAmount,
     });
   }
+  handleEditOfDueDate(e) {
+    const newDueDate = e.target.value;
+    this.setState({
+      localDueDate: newDueDate,
+    });
+  }
   handleSubmit(e) {
     e.preventDefault();
     this.props.handlePosting({
       id: this.props.id,
       description: this.state.localDescription,
       amount: this.state.localAmount,
+      dueDate: this.state.localDueDate,
     });
     this.setState({ saved: true });
   }
@@ -55,9 +66,9 @@ class BillPost extends Component {
   }
   isSaved() {
     return this.props.description === this.state.localDescription &&
-          this.props.amount === this.state.localAmount;
+          this.props.amount === this.state.localAmount &&
+          this.props.dueDate === this.state.localDueDate;
   }
-
   render() {
     let activeButtons;
     if (this.isSaved()) {
@@ -86,6 +97,14 @@ class BillPost extends Component {
             onChange={this.handleEditOfAmount}
             className="amounts"
             id={this.props.id}
+          />
+          <input
+            type="date"
+            name="input-date"
+            placeholder="Due date"
+            id="due-date"
+            value={this.state.localDueDate}
+            onChange={this.handleEditOfDueDate}
           />
           <button
             type="submit"
