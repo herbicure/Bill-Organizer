@@ -4,7 +4,8 @@
 }
 
 body {
-  background: url('http://s.hswstatic.com/gif/paying-bills-original.jpg');
+  /*background: url('http://s.hswstatic.com/gif/paying-bills-original.jpg');*/
+  background: url(bill_image.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -12,6 +13,15 @@ body {
   -webkit-background-size: cover;
   margin: 0px;
   text-align: center;
+}
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #main-header {
@@ -27,19 +37,23 @@ ul {
   list-style-type: none;
 }
 
+/*#selling-points {
+  list-style-type: circle;
+}*/
+
 form.bill-post-display {
-  width: 80%;
+  width: 92%;
   display: inline-block;
   text-align: center;
   display: inline-block;
 }
 
 form.bill-post-display input[name="description"] {
-  width: 67%;
+  width: 58%;
   display: inline-block;
-  margin: 3px;
+  margin: 2px;
   font-family: 'Coming Soon', cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: left;
 }
@@ -49,9 +63,18 @@ form.bill-post-display input[name="amount"] {
   display: inline-block;
   margin: 2px;
   font-family: 'Coming Soon', cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: left;
+}
+
+form.bill-post-display input[name="input-date"] {
+  width: 18%;
+  height: 36px;
+  font-size: .9rem;
+  font-family: 'Coming Soon', cursive;
+  font-weight: bold;
+  padding-top: 3px;
 }
 
 input {
@@ -71,14 +94,14 @@ input {
  }
 
 .amounts {
-  color: red;
+  color: #fb4927;
 }
 
 .month {
-  width: 50rem;
+  width: 55rem;
   height: 33rem;
   border: 1px solid black;
-  background-color: #2980b9;
+  background-color: lightblue;
   margin: 0 auto;
   text-align: center;
   right: 35px;
@@ -89,8 +112,9 @@ input {
 
 .month-header {
   font-family: Helvetica;
-  color: white;
-  background-color: #2980b9;
+  color: black;
+ /* background-color: #3498db;*/
+  background-color: lightblue;
 }
 
 .monthLinks {
@@ -131,7 +155,7 @@ input {
 
 .btn {
   color: white;
-  background-color: #3ba4fb;
+  background-color: #fb4927;
   height: 2rem;
   width: 9rem;
   box-sizing: border-box;
@@ -140,10 +164,11 @@ input {
 }
 
 #sub-header {
-  font-size: 1rem;
-  color: red;
-  margin-top: 0;
-  padding: 0;
+  font-size: 1.4rem;
+  color: black;
+ /* font-style: italic;*/
+  margin-top: -77px;
+  font-family: 'Handlee', cursive;
 }
 
 h2 {
@@ -157,10 +182,37 @@ h2 {
 }
 
 #tot {
-  color: red;
+  color: #fb4927;
 }
 
 .input-forms {
   border: 1px solid black;
-  background-color: #fbfdb4;
+  /*background-color: #fbfdb4;*/
+}
+
+#home-screen {
+  background-color: white;
+  height: 50%;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  border: 0.5px solid gray;
+}
+
+#home-header {
+  font-size: 1.9rem;
+  padding-top: 10px;
+  font-family: 'Handlee', cursive;
+  color: #fb4927;
+}
+
+#app-summary {
+  /*background-color: lightblue;*/
+  font-size: 1.6rem;
+}
+
+#wallet {
+  width: 140px;
+  height: 110px;
+  margin-top: -10px;
 }
