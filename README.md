@@ -1,29 +1,19 @@
-# Bill-Organizer
+# MONTHLY-BILL-ORGANIZER
+
+### A tool where a user can sign-in/register to manually enter and organize their finances each month
+
+<!-- ![Bill_Organizer](Earworm_screenshot.png) -->
+
+User has the ability to register/sign-up for an account with email and password authentication. If they already have an account, then simply sign-in to view their information.  Once logged in, the user will be presented with a link to each month of the year (in this case, it is just the 2016 calendar year) where they can click on a month and then manually enter their financial expenses, including a description, an amount, and due date.  The total will automatically update with each bill entry.
+
+Still working on:  cross browser compatibility, a trend bar graph in the user's dashboard, some additional styling.
+
+Tech used:
+* HTML5
+* CSS
+* Javascript 
+* ReactJS
+* Firebase
 
 
-## Project MVP
-Monthly Bill Organizer
-  -a page where a user can go and manually enter/organize their bills each month
-
-## Technologies
-ReactJS
-Firebase
-HTML
-CSS
-
-## Next Steps
--build the environment
--create firebase database
--set up user auth (either first or last)
--work on homepage component
--create active links for each month of the year in nav section
--work on a single month component with a route to that month
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-list/form of bill description and amount
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-figure out how to have an input formatted to a dollar amount (??)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-total the amounts (??)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-have ability to delete/add to the form
-
-## Bonuses 
--Biggest challenge - totaling the inputs
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ensuring the total changes with every add/delete?
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-total being stored in firebase/remaining same when page refreshed
+ 
