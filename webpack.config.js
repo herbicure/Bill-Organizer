@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   devtool: 'source-map',
-  entry: path.join(__dirname, 'src', 'index.jsx'),
+  entry: path.join(__dirname, 'src', 'index.js'),
   devServer: {
     contentBase: path.join(__dirname, 'src', 'static'),
     inline: true,
