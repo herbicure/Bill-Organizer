@@ -33,7 +33,7 @@ body {
   margin-top: 10px;
 }
 
-ul {
+li {
   list-style-type: none;
 }
 
@@ -216,3 +216,4 @@ h2 {
   height: 110px;
   margin-top: -10px;
 }
+
