@@ -58,7 +58,8 @@ class App extends Component {
     return (
       <div>
         <div id="app-nav">
-          <h1 id="main-header">MONTHLY BILL ORGANIZER</h1>
+          <h1 id="main-header">MONTHLY BILL ORGANIZER</h1><br />
+          <h4 id="sub-header">~Never miss another payment again~</h4>
 
           {
             this.loggedInLinks()
