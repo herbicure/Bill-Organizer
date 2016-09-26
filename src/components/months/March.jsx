@@ -33,6 +33,7 @@ class March extends Component {
             id,
             amount: oneBill.amount,
             description: oneBill.description,
+            dueDate: oneBill.dueDate,
           };
         });
         this.setState({ billPosts });
@@ -40,11 +41,11 @@ class March extends Component {
       }
     });
   }
-  handlePosting({ id, amount, description }) {
+  handlePosting({ id, amount, description, dueDate }) {
     if (id) {
-      this.httpUpdatePost({ id, amount, description });
+      this.httpUpdatePost({ id, amount, description, dueDate });
     } else {
-      this.httpPublishPost({ amount, description });
+      this.httpPublishPost({ amount, description, dueDate });
     }
   }
   httpRemovePost(id) {
@@ -54,17 +55,17 @@ class March extends Component {
       this.httpGetPosts();
     });
   }
-  httpUpdatePost({ id, amount, description }) {
+  httpUpdatePost({ id, amount, description, dueDate }) {
     let userId = firebase.auth().currentUser.uid;
     const url = `https://monthly-bill-organizer.firebaseio.com/users/${userId}/2016/march/${id}.json`;
-    request.patch(url).send({ id, amount, description }).then(() => {
+    request.patch(url).send({ id, amount, description, dueDate }).then(() => {
       this.httpGetPosts();
     });
   }
-  httpPublishPost({ amount, description }) {
+  httpPublishPost({ amount, description, dueDate }) {
     let userId = firebase.auth().currentUser.uid;
     const url = `https://monthly-bill-organizer.firebaseio.com/users/${userId}/2016/march.json`;
-    request.post(url).send({ amount, description }).then(() => {
+    request.post(url).send({ amount, description, dueDate }).then(() => {
       this.httpGetPosts();
     });
   }
