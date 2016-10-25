@@ -28133,16 +28133,16 @@
 	    _react2.default.createElement(
 	      "h1",
 	      { id: "home-header" },
-	      " A one stop shop for managing your expenses online! "
+	      " Manage your expenses online!"
 	    ),
-	    _react2.default.createElement("img", { id: "wallet", src: "/images/wallet.png" }),
+	    _react2.default.createElement("img", { id: "wallet", src: "images/wallet.png" }),
 	    _react2.default.createElement(
 	      "div",
 	      { id: "app-summary" },
 	      _react2.default.createElement(
 	        "p",
 	        null,
-	        "Simply log-in or register for immediate assistance with: ",
+	        "Log-in or register for immediate assistance with: ",
 	        _react2.default.createElement("br", null)
 	      ),
 	      _react2.default.createElement(
@@ -32025,7 +32025,7 @@
 	
 	      var userId = _firebaseConfig2.default.auth().currentUser.uid;
 	      var url = 'https://monthly-bill-organizer.firebaseio.com/users/' + userId + '/2016/august.json';
-	      _superagent2.default.post(url).send({ amount: amount, description: description }).then(function () {
+	      _superagent2.default.post(url).send({ amount: amount, description: description, dueDate: dueDate }).then(function () {
 	        _this5.httpGetPosts();
 	      });
 	    }
