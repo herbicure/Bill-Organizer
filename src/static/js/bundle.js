@@ -28135,7 +28135,7 @@
 	      { id: "home-header" },
 	      " A one stop shop for managing your expenses online! "
 	    ),
-	    _react2.default.createElement("img", { id: "wallet", src: "./images/wallet.png" }),
+	    _react2.default.createElement("img", { id: "wallet", src: "/images/wallet.png" }),
 	    _react2.default.createElement(
 	      "div",
 	      { id: "app-summary" },

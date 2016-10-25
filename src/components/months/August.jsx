@@ -65,7 +65,7 @@ class August extends Component {
   httpPublishPost({ amount, description, dueDate }) {
     let userId = firebase.auth().currentUser.uid;
     const url = `https://monthly-bill-organizer.firebaseio.com/users/${userId}/2016/august.json`;
-    request.post(url).send({ amount, description }).then(() => {
+    request.post(url).send({ amount, description, dueDate }).then(() => {
       this.httpGetPosts();
     });
   }

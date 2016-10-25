@@ -3,10 +3,10 @@ import React, {Component} from 'react';
 const Home = () => {
   return (
     <div id="home-screen">
-      <h1 id="home-header"> A one stop shop for managing your expenses online! </h1>
+      <h1 id="home-header"> Manage your expenses online! </h1>
       <img id="wallet" src="/images/wallet.png" />
         <div id="app-summary">
-         <p>Simply log-in or register for immediate assistance with: <br /></p>
+          <p>Log-in or register for immediate assistance with: <br /></p>
           <ul id="selling-points">
             <li className="sellLi">Payment punctuality</li>
             <li className="sellLi">Budgeting</li>
