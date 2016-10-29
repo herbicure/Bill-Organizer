@@ -27308,7 +27308,7 @@
 	          _react2.default.createElement(
 	            'h4',
 	            { id: 'sub-header' },
-	            '~Never miss another payment again~'
+	            'Never miss another payment again'
 	          ),
 	          this.loggedInLinks()
 	        ),
